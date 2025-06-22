@@ -1,75 +1,134 @@
 # Multi-Agent Coding Loop
 
-A lightweight agent orchestration framework to enhance code development using multiple LLMs:
+A lightweight agent orchestration framework for enhancing code development through multi-agent LLM collaboration.
 
-- **GitHub Copilot**: Inline autocomplete
-- **Grok 3**: Debugging and alternative solutions
-- **DeepSeekCoder**: Syntax-aware refactoring and improvements
-- **Claude API**: Explanations, tests, refactoring, documentation
-- **GPT-4o** (optional): General fallback reasoning
+Supports flexible combinations of local and cloud-based LLMs:
+
+- **Claude Code (API)**: Main code generation engine
+- **Code LLaMA Python**: Reviewer / AI/LLM specialist (Vast.ai GPU)
+- **StarCoder 2**: Reviewer / testing agent (Vast.ai GPU)
+- **Local LLMs (CPU / GPU)**: Additional meta reasoning agents
+- **GPT-4o / Claude API (optional)**: For reflection, advanced feedback
+
+---
 
 ## Project Objectives and Philosophy
 
-This project starts with a simple class-based agent implementation — where each agent (Writer, Reviewer, Tester) is a Python class that prompts an LLM for a specific role. The goal is to provide a clear, educational example of how multi-agent LLM loops work — without heavy frameworks or complex orchestration. In future phases, we will evolve these agents toward more “real” agents — with memory, reasoning, and adaptive loops — using frameworks like LangGraph or CrewAI. The priority is to keep the project flexible, educational, and easy for others to understand and extend.
+The project started as a simple **class-based agent loop** using local LLMs — to provide an educational foundation for multi-agent orchestration (Writer, Reviewer, Tester classes).
 
-## Goals in mind
+Now evolving toward a flexible architecture that can:
 
-- Accelerate coding workflows with a multi-agent loop
-- Combine strengths of different LLMs
+✅ Combine cloud APIs + local models + GPU agents  
+✅ Run adaptable coding loops with multiple reviewers  
+✅ Support learning loops for self-improvement (fine-tune open models from experience)  
+✅ Stay **framework-light** — no heavy orchestration frameworks required
+
+Future: Agents will gain memory, reflection, adaptive behaviors — using frameworks like LangGraph or CrewAI — but with clear, reusable architecture.
+
+---
+
+## Goals
+
+- Accelerate AI/LLM project development using multi-agent loops
+- Combine strengths of different LLMs (Claude, Code LLaMA, StarCoder, etc.)
 - Provide cross-model feedback and validation
-- Maintain a reusable agent layer across projects
+- Build reusable agent layers for future self-improving loops
+
+---
+
+## Current Architectures
+
+### v0.1 — Initial Architecture (Local CPU loop)
+
+- Local LLMs running in Ollama (Mistral 7B)
+- Class-based Writer / Reviewer / Tester agents
+- Run fully on local CPU
+
+### v0.2 — Next Architecture (Mixed Cloud + GPU loop)
+
+- **Claude Code API** → Main code generator
+- **Code LLaMA Python 7B/34B** → Reviewer (AI/LLM specialist)
+- **StarCoder 2 15B** → Reviewer / testing agent
+- **Optional Local LLM on CPU** → Meta reasoning agent
+- MCP (Multi-Agent Coding Loop) orchestrates interactions
+
+Runs across:
+
+- Local CPU agents  
+- Vast.ai GPU agents (Code LLaMA, StarCoder)  
+- Claude API agents  
+
+---
 
 ## Features
 
 - See [ROADMAP.md](ROADMAP.md)
 
-## Approach 
+---
 
-- Local CPU loop (Ollama)
-- Cloud GPU loop (Vast.ai)
-- Direct API backends (OpenAI, Anthropic) — optional
-- Better than Cline: adaptive loops, memory, visualization
+## Approach
 
+- Modular class-based agents
+- CPU loop (Ollama)
+- GPU loop (Vast.ai)
+- Cloud APIs (Claude, OpenAI) — optional but supported
+- MCP coordinates all agents (Claude + GPU + CPU)
+- Focus on **adaptive loops** + learning from experience
+
+---
 
 ## Sample Code
 
 ```bash
+# Assume you are on Linux
 
-# Assume you are in Linux 
-
-# Install python 3.10
+# Install Python 3.10
 sudo apt update
 sudo apt install python3.10 python3.10-venv python3.10-dev python3.10-distutils
 
-# Install UV 
+# Install UV
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# clone this repo
+# Clone this repo
 git clone https://github.com/iptracej-education/multi-agent-coding-loop
 cd multi-agent-coding-loop
 
-# Setup UV 
+# Setup UV
 uv venv .venv
 source .venv/bin/activate
 uv pip install requests
 
-# install ollama 
+# Install Ollama
 curl https://ollama.com/install.sh | bash
 ollama --version
 
-# check if ollama is running. If not, run ollama serve
+# Check if Ollama is running
 ps aux | grep -i ollama
 
-# If not running, you can start manually:
+# If not running:
 ollama serve
 
-# pull mistral 7B model (used in this sample)
+# Pull Mistral 7B model (used in this sample)
 ollama pull mistral
 
-# Run the sample multi-agent loop
-uv run python loops/local_cpu_loop.py 
+# Run the sample local CPU loop
+uv run python loops/local_cpu_loop.py
 
-# or 
+# or
 
 uv run python examples/local_cpu_loop_simple.py
 ```
+
+---
+
+### Coming soon
+
+- Example configs for **Claude + GPU reviewers**
+- Unified agent API for easy extension
+- Data logging for fine-tuning local models
+
+---
+
+### License
+
+MIT — open educational project.
