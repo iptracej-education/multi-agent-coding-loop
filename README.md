@@ -37,7 +37,23 @@ This project starts with a simple class-based agent implementation — where eac
 
 ```bash
 
-pip install requests 
+# Assume you are in Linux 
+
+# Install python 3.10
+sudo apt update
+sudo apt install python3.10 python3.10-venv python3.10-dev python3.10-distutils
+
+# Install UV 
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# clone this repo
+git clone https://github.com/YOUR_USERNAME/multi-agent-coding-loop.git
+cd multi-agent-coding-loop
+
+# Setup UV 
+uv venv .venv
+source .venv/bin/activate
+uv pip install requests
 
 # install ollama 
 curl https://ollama.com/install.sh | bash
@@ -45,12 +61,13 @@ ollama --version
 
 # check if ollama is running. If not, run ollama serve
 ps aux | grep -i ollama
+
+# If not running, you can start manually:
 ollama serve
 
-# pull mistral 
+# pull mistral 7B model (used in this sample)
 ollama pull mistral
 
-# run a python code 
-python examples/local_cpu_loop_simple.py
-
+# Run the sample multi-agent loop
+uv run python loops/local_cpu_loop.py 
 ```
