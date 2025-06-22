@@ -1,3 +1,44 @@
 __pycache__/
 *.pyc
 .env
+uv.lock
+# Ignore virtual environment directories
+venv/
+.env/
+.venv/
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+*.pyd   
+# Ignore Jupyter Notebook checkpoints   
+.ipynb_checkpoints/
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.temp
+# Ignore coverage reports
+.coverage
+.coverage.*
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.swp
+# Ignore system files
+.DS_Store
+Thumbs.db
+# Ignore Python egg files
+*.egg
+*.egg-info/
+# Ignore distribution files
+dist/
+build/
+*.whl
+# Ignore cache directories
+__pycache__/
+# Ignore Ollama model files
+ollama_models/
+# Ignore Ollama directories
+ollama/
+# Ignore Ollama related files
+ollama.*
+ollama_*
