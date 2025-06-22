@@ -1,6 +1,6 @@
 # Multi-Agent Coding Loop
 
-## WORKING-IN-PROGRESS
+## WORKING-IN-PROGRESS - 
 
 A lightweight agent orchestration framework to enhance code development using multiple LLMs:
 
@@ -17,7 +17,36 @@ A lightweight agent orchestration framework to enhance code development using mu
 - Provide cross-model feedback and validation
 - Maintain a reusable agent layer across projects
 
-## How to Run
+## Features
+
+- See `ROADMAP.md`
+
+## Approach 
+
+- Local CPU loop (Ollama)
+- Cloud GPU loop (Vast.ai)
+- Direct API backends (OpenAI, Anthropic) — optional
+- Better than Cline: adaptive loops, memory, visualization
+
+
+## Sample Code
 
 ```bash
-python agent_loop.py --file sample_code/test1.py
+
+pip install requests 
+
+# install ollama 
+curl https://ollama.com/install.sh | bash
+ollama --version
+
+# check if ollama is running. If not, run ollama serve
+ps aux | grep -i ollama
+ollama serve
+
+# pull mistral 
+ollama pull mistral
+
+# run a python code 
+python examples/local_cpu_loop_simple.py
+
+```

@@ -1,0 +1,20 @@
+
+# Install Ollama on Linux
+
+curl https://ollama.com/install.sh | bash
+
+
+# check if Ollama is installed
+ollama --version
+
+# check if Ollama is running
+ps aux | grep -i ollama
+
+# If Ollama is not running, 
+# Start Ollama
+
+ollama serve
+
+# Pull the Mistral model
+
+ollama pull mistral
