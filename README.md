@@ -1,7 +1,5 @@
 # Multi-Agent Coding Loop
 
-## WORKING-IN-PROGRESS - 
-
 A lightweight agent orchestration framework to enhance code development using multiple LLMs:
 
 - **GitHub Copilot**: Inline autocomplete
@@ -70,4 +68,8 @@ ollama pull mistral
 
 # Run the sample multi-agent loop
 uv run python loops/local_cpu_loop.py 
+
+# or 
+
+uv run python examples/local_cpu_loop_simple.py
 ```
