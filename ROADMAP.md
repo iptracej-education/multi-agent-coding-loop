@@ -1,7 +1,5 @@
 # Multi-Agent Coding Loop — Roadmap
 
-**Goal:** Surpass Cline by flexibility, educational value, and open-source friendliness.
-
 ## 1-Year Plan
 
 ### Phase 1: Core loop + backends (Month 1–2)
@@ -9,6 +7,7 @@
 - Cloud GPU loop (Vast.ai)
 - Basic agent classes (Writer, Reviewer, Tester)
 - Backend adapters (Ollama, llama.cpp)
+- Document simple class-based agent architecture (README + example loop)
 
 ### Phase 2: Memory + retries (Month 3–4)
 - Agent memory
@@ -31,6 +30,6 @@
 
 ### Phase 6: RLHF + polish (Month 10–12)
 - Data generation
-- Public release
-- GitHub / OSS community
+- Public release with educational documentation
+- Share with GitHub / OSS / AI learning community
 

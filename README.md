@@ -10,7 +10,11 @@ A lightweight agent orchestration framework to enhance code development using mu
 - **Claude API**: Explanations, tests, refactoring, documentation
 - **GPT-4o** (optional): General fallback reasoning
 
-## Goals
+## Project Objectives and Philosophy
+
+This project starts with a simple class-based agent implementation — where each agent (Writer, Reviewer, Tester) is a Python class that prompts an LLM for a specific role. The goal is to provide a clear, educational example of how multi-agent LLM loops work — without heavy frameworks or complex orchestration. In future phases, we will evolve these agents toward more “real” agents — with memory, reasoning, and adaptive loops — using frameworks like LangGraph or CrewAI. The priority is to keep the project flexible, educational, and easy for others to understand and extend.
+
+## Goals in mind
 
 - Accelerate coding workflows with a multi-agent loop
 - Combine strengths of different LLMs
