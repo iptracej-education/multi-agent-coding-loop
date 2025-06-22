@@ -1,35 +1,51 @@
 # Multi-Agent Coding Loop — Roadmap
 
-## 1-Year Plan
+## Vision
 
-### Phase 1: Core loop + backends (Month 1–2)
-- Local CPU loop (Ollama)
-- Cloud GPU loop (Vast.ai)
-- Basic agent classes (Writer, Reviewer, Tester)
-- Backend adapters (Ollama, llama.cpp)
-- Document simple class-based agent architecture (README + example loop)
+Educational, flexible, open multi-agent loop  
+Support LLM coding workflows — AI/LLM project development  
+No lock-in — easy to swap models and APIs  
+Road to full self-improving LLM agents  
 
-### Phase 2: Memory + retries (Month 3–4)
-- Agent memory
-- Adaptive retries
-- Feedback scoring
+---
 
-### Phase 3: Visualization (Month 5–6)
-- Dashboard
-- Token cost tracker
-- Message flow visualizer
+## v0.1 — Initial Version (Local CPU loop)
 
-### Phase 4: Advanced agents (Month 7–8)
-- Dynamic model selector
-- Multi-agent roles (Critic, Summarizer)
+Local CPU loop with class-based agents  
+Ollama + Mistral 7B  
+Writer / Reviewer / Tester classes  
+Simple loop orchestration  
+No framework dependency  
 
-### Phase 5: API backends (Month 9)
-- OpenAI backend
-- Anthropic backend
-- OpenRouter backend (optional)
+---
 
-### Phase 6: RLHF + polish (Month 10–12)
-- Data generation
-- Public release with educational documentation
-- Share with GitHub / OSS / AI learning community
+## v0.2 — Next Version (Cloud + GPU architecture)
+
+Claude Code (API) → main code generator  
+Code LLaMA Python → Reviewer (GPU)  
+StarCoder 2 → Reviewer/tester (GPU)  
+Mixed agent loop (Claude + GPU + CPU)  
+Vast.ai GPU integration  
+Agent interface abstraction  
+
+---
+
+## v0.3 — Adaptive Loops
+
+Reflection agent (Claude or local)  
+Critique agent  
+Memory layer (SQLite or JSON first)  
+Experience log for training data  
+Run tracking and visualization  
+
+---
+
+## v0.4 — Learning Loop
+
+Fine-tune open models using collected feedback  
+Replace API agents with local tuned models  
+RLHF / DPO pipeline (optional)  
+Fully local self-improving loop  
+
+
 
