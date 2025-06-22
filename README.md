@@ -47,7 +47,7 @@ sudo apt install python3.10 python3.10-venv python3.10-dev python3.10-distutils
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # clone this repo
-git clone https://github.com/YOUR_USERNAME/multi-agent-coding-loop.git
+git clone https://github.com/iptracej-education/multi-agent-coding-loop
 cd multi-agent-coding-loop
 
 # Setup UV 
