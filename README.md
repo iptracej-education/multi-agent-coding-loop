@@ -18,10 +18,10 @@ The project started as a simple **class-based agent loop** using local LLMs — 
 
 Now evolving toward a flexible architecture that can:
 
-✅ Combine cloud APIs + local models + GPU agents  
-✅ Run adaptable coding loops with multiple reviewers  
-✅ Support learning loops for self-improvement (fine-tune open models from experience)  
-✅ Stay **framework-light** — no heavy orchestration frameworks required
+- Combine cloud APIs + local models + GPU agents  
+- Run adaptable coding loops with multiple reviewers  
+- Support learning loops for self-improvement (fine-tune open models from experience)  
+- Stay **framework-light** — no heavy orchestration frameworks required
 
 Future: Agents will gain memory, reflection, adaptive behaviors — using frameworks like LangGraph or CrewAI — but with clear, reusable architecture.
 
